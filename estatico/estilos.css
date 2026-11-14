@@ -279,6 +279,11 @@ ul, ol { list-style: none; }
 .vias a { color: #fff; font: 500 1.2rem/1.2 var(--titulos); text-decoration: none; overflow-wrap: anywhere; }
 .vias a:hover { text-decoration: underline; }
 
+/* Botón fijo de WhatsApp: un enlace normal, sin cargar nada de fuera */
+.whatsapp { position: fixed; right: clamp(14px, 3vw, 28px); bottom: clamp(14px, 3vw, 28px); z-index: 40; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: #1faa53; color: #fff; box-shadow: 0 8px 24px rgb(10 30 28 / .35); transition: transform .15s, background .15s; }
+.whatsapp:hover { background: #17964a; color: #fff; transform: scale(1.06); }
+.whatsapp svg { width: 30px; height: 30px; }
+
 /* Pie */
 .pie { background: var(--tinta); color: #c9d1ce; padding: 48px 0 28px; font-size: .95rem; }
 .pie a { color: #fff; }
@@ -385,5 +390,5 @@ ul, ol { list-style: none; }
 }
 
 @media print {
-  .cabecera, .reserva, .contacto, .galeria-todas { display: none; }
+  .cabecera, .reserva, .contacto, .galeria-todas, .whatsapp { display: none; }
 }

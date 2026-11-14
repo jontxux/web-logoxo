@@ -206,7 +206,7 @@ texto = "Lehentasuna sartzeko eta irteteko orduetan, erabilgarritasunaren araber
 etiqueta = "Kokapena"
 titulo = "Kalea eta auzoa"
 texto = "Herrikobarra oinezkoen kale lasaia da, alde zaharraren erdian baina Kale Nagusiko eta Zigordiako joan-etorritik aparte. Giroa kantoia buelta batera duzu, eta isiltasuna etxean."
-mapa = "Ikusi mapan"
+mapa = "Ireki Google Maps-en"
 [[zona.item]]
 termino = "Hondartza"
 texto = "bost minutu oinez, eta pintxo-gunea ere bai"
@@ -242,6 +242,8 @@ etiqueta = "Kontaktua"
 titulo = "Datak begiratuko ditugu?"
 texto = "Ikusi bi apartamentuen erabilgarritasuna eta erreserbatu komisiorik gabe. Eta zalantzarik baduzu, idatzi iezaguzu: guk erantzungo dizugu."
 whatsapp = "WhatsApp"
+whatsapp_boton = "Idatzi iezaguzu WhatsApp bidez"
+whatsapp_texto = "Kaixo, galdera bat daukat Logoxori buruz."
 llamar = "Telefonoa"
 correo = "Posta elektronikoa"
 
