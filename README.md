@@ -9,12 +9,15 @@ El buscador de fechas pregunta a la consulta pública de Lodgify
 (`busqueda` en `[reserva]`) qué apartamentos están libres y enseña los dos
 con su precio; si la consulta falla, enlaza a la pasarela sin más.
 
-No está publicada. logoxoat.com sigue siendo la web de Lodgify.
+Está en pruebas en https://jontxux.github.io/web-logoxo/ (GitHub Pages, rama
+`gh-pages`), con `indexar = false` para que no la recojan los buscadores.
+logoxoat.com sigue siendo la web de Lodgify.
 
 ## Uso
 
     python3 generar.py            # genera publico/
     python3 generar.py --servir   # y la sirve en http://localhost:8000
+    ./publicar.sh                 # genera y sube publico/ a GitHub Pages
 
 Solo necesita Python 3.11+ y ImageMagick (`magick`). La primera vez tarda
 unos 20 s porque reduce las fotos; luego las reutiliza.
@@ -51,9 +54,9 @@ motor.
 
 ## Antes de publicarla
 
-- En Lodgify (Creador web › Estilos › Colores) está guardada, sin publicar, la
-  paleta verde para que la pasarela no salga en negro y coral: falta pulsar
-  «Publicar sitio web». La pasarela no usa la fuente del tema.
+- La pasarela de Lodgify ya va en verde (colores del tema publicados el
+  15/11/2026). El día del cambio: `indexar = true` y un fichero `CNAME` con el
+  dominio en la rama `gh-pages` (o el dominio propio en los ajustes de Pages).
 - El DNS de logoxoat.com lo lleva Lodgify (los registros los añaden ellos a
   mano): para apuntar el dominio aquí hay que pedírselo a su soporte.
 
