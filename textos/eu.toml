@@ -36,6 +36,13 @@ fallo = "Une honetan ezin dugu erabilgarritasuna hemendik kontsultatu. Hurrengo 
 resultados = "Bilaketaren emaitza"
 elegir = "Erreserbatu"
 ver_precio = "Ikusi prezioa"
+min_noches = "Gutxienez {n} gau egun horretatik"
+borrar = "Ezabatu datak"
+elegir_llegada = "Aukeratu sarrera-eguna"
+elegir_salida = "Aukeratu irteera-eguna"
+mes_anterior = "Aurreko hilabetea"
+mes_siguiente = "Hurrengo hilabetea"
+ocupado_dia = "beteta"
 
 [portada]
 etiqueta = "Zarautz · Alde zaharra"

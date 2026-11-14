@@ -30,6 +30,195 @@
     return el;
   };
 
+  // Calendario de rango, como el de un buscador de alojamientos: un solo
+  // desplegable con dos meses donde se marca la llegada y luego la salida.
+  // Pinta en gris los días en que no queda ningún apartamento libre y respeta
+  // la estancia mínima. Sustituye a los dos campos de fecha del navegador, que
+  // se quedan ocultos y siguen llevando el valor.
+  const montarCalendario = (form, datos, llegada, salida) => {
+    const tx = datos.textos;
+    const hoy = iso(new Date());
+    const dia = (texto) => new Date(`${texto}T12:00:00`);
+    const fmtCampo = new Intl.DateTimeFormat(datos.idioma, { weekday: "short", day: "numeric", month: "short" });
+    const fmtMes = new Intl.DateTimeFormat(datos.idioma, { month: "long", year: "numeric" });
+    const fmtSemana = new Intl.DateTimeFormat(datos.idioma, { weekday: "short" });
+    const fmtDia = new Intl.DateTimeFormat(datos.idioma, { weekday: "long", day: "numeric", month: "long" });
+
+    // Ocupación: fecha → { libre, min } sumando los apartamentos.
+    const ocupacion = new Map();
+    let cargadoHasta = null;   // último día del que hay datos
+    let cargando = false;
+    let sinDatos = !datos.calendario || !window.fetch;
+    const cargar = async (desde) => {
+      if (sinDatos || cargando) return;
+      cargando = true;
+      try {
+        const respuestas = await Promise.all(datos.aptos.map((a) =>
+          fetch(datos.calendario.replace("{id}", a.id).replace("{fecha}", desde), { credentials: "omit", headers: { Accept: "application/json" } })
+            .then((r) => { if (!r.ok) throw new Error("calendario"); return r.json(); })));
+        let ultimo = desde;
+        for (const r of respuestas) {
+          for (const d of r.calendar) {
+            const e = ocupacion.get(d.date) || { libre: false, min: Infinity };
+            if (d.isAvailable) { e.libre = true; e.min = Math.min(e.min, d.minimalStay || 1); }
+            ocupacion.set(d.date, e);
+            if (d.date > ultimo) ultimo = d.date;
+          }
+        }
+        cargadoHasta = ultimo;
+      } catch (error) {
+        sinDatos = true;   // sin ocupación: se deja elegir cualquier día futuro
+        ocupacion.clear();
+      }
+      cargando = false;
+      pintar();
+    };
+    const ocupado = (f) => { const e = ocupacion.get(f); return !!e && !e.libre; };
+
+    // El control que se ve: «Llegada | Salida» en una sola caja.
+    const control = crear("div", "fechas");
+    const bLlegada = crear("button", "fechas-campo");
+    const bSalida = crear("button", "fechas-campo");
+    bLlegada.type = bSalida.type = "button";
+    control.append(bLlegada, bSalida);
+    const panel = crear("div", "calendario");
+    panel.hidden = true;
+    panel.setAttribute("role", "dialog");
+    for (const etiqueta of form.querySelectorAll("[data-fecha]")) etiqueta.hidden = true;
+    llegada.required = salida.required = false;
+    form.querySelector(".reserva-campos").prepend(control);
+    control.after(panel);
+
+    let mes = dia(hoy); mes.setDate(1);
+    let pasando = null;        // día bajo el ratón mientras se elige la salida
+    const eligiendoSalida = () => llegada.value && !salida.value;
+    const minimo = () => { const e = ocupacion.get(llegada.value); return e && Number.isFinite(e.min) ? e.min : 1; };
+    // Primer día sin ningún apartamento libre a partir de la llegada: se puede
+    // salir ese día, pero no más tarde.
+    const tope = () => {
+      let f = llegada.value;
+      for (let i = 0; i < 400; i++) { if (ocupado(f)) return f; f = sumar(f, 1); }
+      return null;
+    };
+
+    const campo = (boton, rotulo, valor, activo) => {
+      boton.replaceChildren(crear("span", "fechas-rotulo", rotulo), crear("span", valor ? "fechas-valor" : "fechas-valor vacio", valor ? fmtCampo.format(dia(valor)) : "—"));
+      boton.classList.toggle("activo", activo);
+    };
+
+    const pintar = () => {
+      campo(bLlegada, tx.llegada, llegada.value, !panel.hidden && !eligiendoSalida());
+      campo(bSalida, tx.salida, salida.value, !panel.hidden && eligiendoSalida());
+      if (panel.hidden) return;
+      const dosMeses = form.clientWidth >= 620;
+      panel.classList.toggle("calendario-doble", dosMeses);
+      const cabeza = crear("div", "calendario-cabeza");
+      const atras = crear("button", "calendario-flecha", "←");
+      const adelante = crear("button", "calendario-flecha", "→");
+      atras.type = adelante.type = "button";
+      atras.setAttribute("aria-label", tx.mes_anterior);
+      adelante.setAttribute("aria-label", tx.mes_siguiente);
+      atras.disabled = iso(mes) <= hoy;
+      const limite = dia(hoy); limite.setMonth(limite.getMonth() + 18);
+      adelante.disabled = mes >= limite;
+      atras.addEventListener("click", () => { mes.setMonth(mes.getMonth() - 1); pintar(); });
+      adelante.addEventListener("click", () => { mes.setMonth(mes.getMonth() + 1); pintar(); });
+      cabeza.append(atras, crear("p", "calendario-guia", eligiendoSalida() ? tx.elegir_salida : tx.elegir_llegada), adelante);
+
+      const meses = crear("div", "calendario-meses");
+      const min = eligiendoSalida() ? minimo() : 1;
+      const fin = eligiendoSalida() ? tope() : null;
+      let ultimoVisible = hoy;
+      for (let m = 0; m < (dosMeses ? 2 : 1); m++) {
+        const primero = new Date(mes); primero.setMonth(mes.getMonth() + m);
+        const caja = crear("div", "calendario-mes");
+        caja.append(crear("p", "calendario-titulo", fmtMes.format(primero)));
+        const rejilla = crear("div", "calendario-dias");
+        for (let d = 0; d < 7; d++) rejilla.append(crear("span", "calendario-semana", fmtSemana.format(new Date(2024, 0, 1 + d))));   // 1/1/2024 fue lunes
+        const hueco = (primero.getDay() + 6) % 7;
+        for (let h = 0; h < hueco; h++) rejilla.append(crear("span"));
+        const dias = new Date(primero.getFullYear(), primero.getMonth() + 1, 0).getDate();
+        for (let n = 1; n <= dias; n++) {
+          const f = iso(new Date(primero.getFullYear(), primero.getMonth(), n, 12));
+          ultimoVisible = f;
+          const b = crear("button", "calendario-dia", n);
+          b.type = "button";
+          b.dataset.fecha = f;
+          let libre = f >= hoy;
+          let lleno = false;
+          if (eligiendoSalida() && f > llegada.value) {
+            // Como salida: respeta el mínimo y no salta por encima de una noche sin sitio.
+            if (f < sumar(llegada.value, min) || (fin && f > fin)) libre = false;
+          } else if (ocupado(f)) { libre = false; lleno = true; }
+          b.disabled = !libre;
+          if (lleno && f >= hoy) b.classList.add("lleno");
+          b.setAttribute("aria-label", fmtDia.format(dia(f)) + (lleno ? `, ${tx.ocupado_dia}` : ""));
+          const hasta = salida.value || (eligiendoSalida() && pasando && pasando > llegada.value ? pasando : "");
+          if (f === llegada.value) b.classList.add("extremo", "inicio");
+          if (f === hasta && hasta) b.classList.add("extremo", "final");
+          if (llegada.value && hasta && f > llegada.value && f < hasta) b.classList.add("dentro");
+          if (f === hoy) b.classList.add("hoy");
+          rejilla.append(b);
+        }
+        caja.append(rejilla);
+        meses.append(caja);
+      }
+      const pie = crear("div", "calendario-pie");
+      pie.append(crear("span", "calendario-aviso", eligiendoSalida() && min > 1 ? tx.min_noches.replace("{n}", min) : ""));
+      const borrar = crear("button", "calendario-borrar", tx.borrar);
+      borrar.type = "button";
+      borrar.hidden = !llegada.value;
+      borrar.addEventListener("click", () => { llegada.value = salida.value = ""; pasando = null; avisar(); pintar(); });
+      pie.append(borrar);
+      panel.replaceChildren(cabeza, meses, pie);
+      if (!sinDatos && (!cargadoHasta || ultimoVisible > cargadoHasta)) cargar(cargadoHasta ? sumar(cargadoHasta, 1) : hoy);
+    };
+
+    const avisar = () => form.dispatchEvent(new Event("input", { bubbles: true }));
+    const abrir = () => {
+      if (!panel.hidden) return;
+      panel.hidden = false;
+      if (llegada.value) { mes = dia(llegada.value); mes.setDate(1); }
+      pintar();
+    };
+    const cerrar = () => { if (panel.hidden) return; panel.hidden = true; pasando = null; pintar(); };
+
+    panel.addEventListener("click", (ev) => {
+      const b = ev.target.closest(".calendario-dia");
+      if (!b || b.disabled) return;
+      const f = b.dataset.fecha;
+      if (eligiendoSalida() && f > llegada.value) {
+        salida.value = f;
+        avisar();
+        cerrar();
+        form.querySelector("button[type=submit]").focus();
+        return;
+      }
+      llegada.value = f;       // primera pulsación, o volver a empezar
+      salida.value = "";
+      pasando = null;
+      avisar();
+      pintar();
+    });
+    panel.addEventListener("mouseover", (ev) => {
+      const b = ev.target.closest(".calendario-dia");
+      if (!b || b.disabled || !eligiendoSalida() || pasando === b.dataset.fecha) return;
+      pasando = b.dataset.fecha;
+      for (const d of panel.querySelectorAll(".calendario-dia")) {
+        const f = d.dataset.fecha;
+        d.classList.toggle("dentro", f > llegada.value && f < pasando);
+        d.classList.toggle("final", f === pasando && pasando > llegada.value);
+        d.classList.toggle("extremo", f === llegada.value || (f === pasando && pasando > llegada.value));
+      }
+    });
+    bLlegada.addEventListener("click", () => { if (!panel.hidden && !eligiendoSalida()) return cerrar(); salida.value = ""; llegada.value = ""; avisar(); panel.hidden ? abrir() : pintar(); });
+    bSalida.addEventListener("click", () => { if (!panel.hidden && eligiendoSalida()) return cerrar(); if (llegada.value) salida.value = ""; avisar(); panel.hidden ? abrir() : pintar(); });
+    document.addEventListener("click", (ev) => { if (!control.contains(ev.target) && !panel.contains(ev.target) && ev.target.isConnected) cerrar(); });
+    form.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && !panel.hidden) { cerrar(); bLlegada.focus(); } });
+    pintar();
+    return { abrir };
+  };
+
   for (const form of document.querySelectorAll("[data-reserva]")) {
     const llegada = form.querySelector("[data-llegada]");
     const salida = form.querySelector("[data-salida]");
@@ -40,15 +229,8 @@
     const datos = JSON.parse(form.dataset.datos);
     const tx = datos.textos;
     const textoNota = nota.textContent;
-    const hoy = iso(new Date());
     let turno = 0;
-    llegada.min = hoy;
-    salida.min = sumar(hoy, 1);
-    llegada.addEventListener("change", () => {
-      if (!llegada.value) return;
-      salida.min = sumar(llegada.value, 1);
-      if (!salida.value || salida.value <= llegada.value) salida.value = sumar(llegada.value, 2);
-    });
+    const calendario = montarCalendario(form, datos, llegada, salida);
     form.addEventListener("input", () => { nota.textContent = textoNota; nota.classList.remove("error"); });
 
     const enlace = (apto) => {
@@ -112,7 +294,7 @@
     };
 
     form.addEventListener("submit", async (ev) => {
-      if (!llegada.value || !salida.value) return;
+      if (!llegada.value || !salida.value) { ev.preventDefault(); calendario.abrir(); return; }
       if (salida.value <= llegada.value) {
         ev.preventDefault();
         nota.textContent = form.dataset.error;

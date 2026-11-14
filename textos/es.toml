@@ -36,6 +36,13 @@ fallo = "Ahora mismo no podemos consultar la disponibilidad desde aquí. La ver�
 resultados = "Resultado de la búsqueda"
 elegir = "Reservar"
 ver_precio = "Ver precio"
+min_noches = "Mínimo {n} noches desde ese día"
+borrar = "Borrar fechas"
+elegir_llegada = "Elige el día de llegada"
+elegir_salida = "Elige el día de salida"
+mes_anterior = "Mes anterior"
+mes_siguiente = "Mes siguiente"
+ocupado_dia = "ocupado"
 
 [portada]
 etiqueta = "Zarautz · Casco antiguo"

@@ -144,9 +144,9 @@ def formulario(idioma, raiz, apto=None, ident="reserva"):
     t, r = TXT[idioma], CFG["reserva"]
     tr = t["reserva"]
     campos = [
-        f'<label class="campo"><span>{e(tr["llegada"])}</span>'
+        f'<label class="campo" data-fecha><span>{e(tr["llegada"])}</span>'
         f'<input type="date" name="{r["llegada"]}" data-llegada required></label>',
-        f'<label class="campo"><span>{e(tr["salida"])}</span>'
+        f'<label class="campo" data-fecha><span>{e(tr["salida"])}</span>'
         f'<input type="date" name="{r["salida"]}" data-salida required></label>',
     ]
     personas = "".join(f'<option{" selected" if n == 2 else ""}>{n}</option>'
@@ -159,10 +159,12 @@ def formulario(idioma, raiz, apto=None, ident="reserva"):
     # ficha en la que se está va el primero.
     aptos = sorted(t["apto"], key=lambda a: a["clave"] != apto)
     datos = {
-        "busqueda": r.get("busqueda", ""), "idioma": idioma,
+        "busqueda": r.get("busqueda", ""), "calendario": r.get("calendario", ""), "idioma": idioma,
         "parametros": {"llegada": r["llegada"], "salida": r["salida"], "adultos": r["adultos"], **r["fijos"]},
         "textos": {k: tr[k] for k in ("buscando", "libre", "ocupado", "noche", "noches", "total", "por_noche",
-                                      "ninguno", "fallo", "resultados", "elegir", "ver_precio")} | {"ver": t["aptos"]["ver"]},
+                                      "ninguno", "fallo", "resultados", "elegir", "ver_precio", "min_noches", "borrar",
+                                      "elegir_llegada", "elegir_salida", "mes_anterior", "mes_siguiente", "ocupado_dia",
+                                      "llegada", "salida")} | {"ver": t["aptos"]["ver"]},
         "aptos": [{
             "id": APTOS[a["clave"]]["id"], "nombre": a["corto"], "lema": a["lema"],
             "reserva": url_reserva(idioma, a["clave"]), "ficha": raiz + ruta(idioma, a["clave"]),

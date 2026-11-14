@@ -36,6 +36,13 @@ fallo = "We can't check availability from here right now. You'll see it, with th
 resultados = "Search result"
 elegir = "Book"
 ver_precio = "See price"
+min_noches = "Minimum {n} nights from that day"
+borrar = "Clear dates"
+elegir_llegada = "Choose your check-in day"
+elegir_salida = "Choose your check-out day"
+mes_anterior = "Previous month"
+mes_siguiente = "Next month"
+ocupado_dia = "booked"
 
 [portada]
 etiqueta = "Zarautz · Old town"

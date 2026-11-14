@@ -35,6 +35,9 @@ max_huespedes = 4
 # Consulta pública de disponibilidad y precio (la que usa el buscador de la
 # web de Lodgify). Devuelve solo los apartamentos libres. Vacía = sin buscador.
 busqueda = "https://api.lodgify.com/v2/search/556520"
+# Días libres y estancia mínima de cada apartamento, para el calendario del
+# buscador (devuelve 90 días desde {fecha}). Vacía = calendario sin ocupación.
+calendario = "https://checkout.lodgify.com/api/v2/websites/logoxo/rentals/{id}/calendar?startDate={fecha}"
 [reserva.fijos]
 currency = "EUR"
 
