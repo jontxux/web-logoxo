@@ -1,0 +1,135 @@
+# Web propia de los apartamentos Logoxo (estática, sin plantillas de Lodgify).
+# Los textos están en textos/<idioma>.toml; aquí va lo que no depende del idioma.
+
+[sitio]
+dominio = "https://logoxoat.com"      # para canonical, hreflang y sitemap
+idiomas = ["es", "eu", "en"]          # el primero es el de la portada raíz
+fotos = "~/Imágenes/logoxo_argazkiak" # originales; el generador las reduce
+anchos = [640, 1280, 1920]
+# false mientras esté en una dirección de prueba: pide a los buscadores que no
+# la indexen. Poner true el día que logoxoat.com apunte aquí.
+indexar = false            # tamaños que se generan de cada foto
+
+[contacto]
+titular = "Jon Bergerandi"
+telefono = "+34 608 06 22 14"
+whatsapp = "34608062214"
+correo = "jonbergerandi@gmail.com"
+calle = "Herrikobarra 1"
+cp = "20800"
+localidad = "Zarautz"
+provincia = "Gipuzkoa"
+registro = "TSS00148"                 # Registro de Empresas y Actividades Turísticas de Euskadi
+mapa = "https://www.google.com/maps/search/?api=1&query=Herrikobarra+1%2C+20800+Zarautz"
+entrada = "16:00"
+salida = "11:00"
+
+# El motor de reservas. Hoy es la pasarela de Lodgify; si se cambia de motor
+# (Beds24, Smoobu...), basta con tocar esta sección.
+[reserva]
+url = "https://checkout.lodgify.com/{idioma}/logoxo/{id}/reservation"
+llegada = "arrival"      # nombres de los parámetros de la URL
+salida = "departure"
+adultos = "adults"
+max_huespedes = 4
+# Consulta pública de disponibilidad y precio (la que usa el buscador de la
+# web de Lodgify). Devuelve solo los apartamentos libres. Vacía = sin buscador.
+busqueda = "https://api.lodgify.com/v2/search/556520"
+[reserva.fijos]
+currency = "EUR"
+
+# Portada: «fondo» es la foto de Zarautz a pantalla completa (una de [[zarautz]])
+# y «foto» la del interior que acompaña al texto de presentación.
+[portada]
+fondo = "mirador"
+foto = { apto = "logoxo1", f = "IMG20250106163532", t = "general" }
+[zona]
+foto = { apto = "logoxo1", f = "IMG20250111113742", t = "fachada" }
+
+# Fotos de Zarautz (carpeta fotos-zarautz/). Las de Wikimedia Commons llevan
+# autor y licencia, que salen en los créditos de la portada; la que no lleva
+# autor es de Jon. «mosaico» es el orden de la franja de Zarautz (la primera
+# sale grande).
+[mapa]
+# Recorte de OpenStreetMap (zoom 16) en estatico/mapa.webp; la marca va en %
+# del ancho y del alto. Herrikobarra 1: 43.2845807, -2.1764527.
+x = 50.0
+y = 65.6
+
+[zarautz]
+mosaico = ["playa", "toldos", "surf", "musika-plaza", "atardecer"]
+[zarautz.fotos.mirador]
+autor = "Giorgio Galeotti"
+licencia = "CC BY-SA 4.0"
+licencia_url = "https://creativecommons.org/licenses/by-sa/4.0"
+origen = "https://commons.wikimedia.org/wiki/File:Beach_of_Zarautz_-_Mirador_de_los_Bancos,_Zarautz,_Spain_-_July_19,_2024.jpg"
+[zarautz.fotos.playa]
+autor = "diego_cue"
+licencia = "CC BY-SA 3.0"
+licencia_url = "https://creativecommons.org/licenses/by-sa/3.0"
+origen = "https://commons.wikimedia.org/wiki/File:Beach_of_Zarautz_-_Basque_country_-_Spain_-_panoramio.jpg"
+[zarautz.fotos.toldos]
+autor = "joquerollo"
+licencia = "CC BY 2.0"
+licencia_url = "https://creativecommons.org/licenses/by/2.0"
+origen = "https://commons.wikimedia.org/wiki/File:Toldos_en_diagonal_en_la_playa_de_Zarauz.jpg"
+[zarautz.fotos.surf]
+autor = "ElviraOliver"
+licencia = "CC BY-SA 3.0 es"
+licencia_url = "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en"
+origen = "https://commons.wikimedia.org/wiki/File:Zarautzko_surf_sunset.JPG"
+[zarautz.fotos.musika-plaza]
+autor = "Theklan"
+licencia = "CC BY-SA 4.0"
+licencia_url = "https://creativecommons.org/licenses/by-sa/4.0"
+origen = "https://commons.wikimedia.org/wiki/File:Nagusia_7_etxea,_Zarauzko_Musika_plaza.jpg"
+[zarautz.fotos.atardecer]
+
+# Cada apartamento: su id en el motor de reservas, su carpeta de fotos y las
+# fotos en el orden en que salen (la primera es la portada). «t» es el tema,
+# que elige el texto alternativo en textos/<idioma>.toml → [fotos].
+[[apartamento]]
+clave = "logoxo1"
+id = 637223
+m2 = 49
+carpeta = "logoxo_bat"
+fotos = [
+  { f = "IMG20250106164027", t = "sofa" },
+  { f = "IMG20250106163532", t = "general" },
+  { f = "IMG20250106164058", t = "cama_ventanas" },
+  { f = "IMG20250105185637", t = "comedor" },
+  { f = "IMG20250105185142", t = "bano" },
+  { f = "IMG20250106163325", t = "cama" },
+  { f = "IMG20250106163338", t = "sofa_cama" },
+  { f = "IMG20250106163548", t = "vestidor" },
+  { f = "IMG20250105185608", t = "cocina" },
+  { f = "IMG20250105185200", t = "bano_adaptado" },
+  { f = "IMG20250111113742", t = "fachada" },
+]
+
+[[apartamento]]
+clave = "logoxo2"
+id = 637387
+m2 = 47
+carpeta = "logoxo_bi"
+fotos = [
+  { f = "IMG20250105150255", t = "sofa" },
+  { f = "IMG20250105145822", t = "general" },
+  { f = "IMG20250105150245", t = "cama_ventanas" },
+  { f = "IMG20250105143858", t = "cocina" },
+  { f = "IMG20250105143225", t = "bano" },
+  { f = "IMG20250105145802", t = "cama" },
+  { f = "IMG20250105142953", t = "comedor" },
+  { f = "IMG20250105150308", t = "tele" },
+  { f = "IMG20250111113742", t = "fachada" },
+]
+
+# Direcciones de la web de Lodgify que aquí no existen como página: se deja
+# una redirección para que los enlaces antiguos no se rompan.
+[redirecciones]
+"es/contactenos" = "es/#contacto"
+"es/propiedades" = "es/#apartamentos"
+"eu/jar-zaitez-gurekin-harremanetan" = "eu/#contacto"
+"eu/propietateak" = "eu/#apartamentos"
+"en/contact-us" = "en/#contacto"
+"en/all-properties" = "en/#apartamentos"

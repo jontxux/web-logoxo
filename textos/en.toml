@@ -1,0 +1,258 @@
+[meta]
+etiqueta = "EN"
+nombre = "English"
+locale = "en_GB"
+titulo = "Holiday Apartments in Zarautz, 5 min from the Beach | Logoxo"
+descripcion = "Two ground-floor lofts in the old town of Zarautz, each with its own street door and no steps. A five-minute walk from the beach. Book direct, with no commission."
+
+[nav]
+apartamentos = "Apartments"
+ubicacion = "Location"
+condiciones = "Terms"
+contacto = "Contact"
+reservar = "Book"
+menu = "Menu"
+saltar = "Skip to content"
+idioma = "Language"
+inicio = "Home"
+
+[reserva]
+titulo = "Check your dates"
+llegada = "Check-in"
+salida = "Check-out"
+huespedes = "Guests"
+error = "Check-out must be after check-in."
+boton = "Search"
+nota = "We'll show you which apartment is free on those dates and what it costs. Secure card payment."
+buscando = "Checking availability…"
+libre = "Available"
+ocupado = "Not available on those dates"
+noche = "1 night"
+noches = "{n} nights"
+total = "{precio} in total"
+por_noche = "{precio} per night"
+ninguno = "Neither apartment is free on those dates. Try other dates or write to us and we'll have a look."
+fallo = "We can't check availability from here right now. You'll see it, with the price, in the next step."
+resultados = "Search result"
+elegir = "Book"
+ver_precio = "See price"
+
+[portada]
+etiqueta = "Zarautz · Old town"
+titulo = "Open-plan, with no separate bedrooms"
+subtitulo = "Ground floor, private street door, no stairs."
+texto = "Logoxo is two ground-floor apartments in the old town of Zarautz. Each has its own door onto the street, with no communal entrance and no steps. Inside they are open-plan: the sleeping area is part of the living space, and the bathroom is separate. The beach is a five-minute walk away."
+ver = "See the apartments"
+
+[[cifras]]
+valor = "2"
+texto = "apartments"
+[[cifras]]
+valor = "49 and 47 m²"
+texto = "each"
+[[cifras]]
+valor = "4"
+texto = "guests maximum"
+[[cifras]]
+valor = "5 min"
+texto = "walk to the beach"
+
+[aptos]
+etiqueta = "The apartments"
+titulo = "Two apartments, take your pick"
+texto = "They are nearly identical. The difference is the accessibility of Logoxo 1."
+ver = "See the apartment"
+reservar = "Book"
+huespedes = "4 guests"
+camas = "Double bed and sofa bed"
+bano = "1 bathroom"
+planta = "Ground floor"
+
+[[apto]]
+clave = "logoxo1"
+slug = "logoxo-1-accessible-open-plan-loft-old-town"
+corto = "Logoxo 1"
+lema = "Accessible open-plan loft, old town"
+resumen = "49 m² at street level, with adapted doorways and bathroom: you can move around the whole apartment in a wheelchair."
+titulo_seo = "Logoxo 1: Accessible Open-Plan Loft in Zarautz Old Town"
+descripcion_seo = "A 49 m² ground-floor loft, step-free and accessible, in the old town of Zarautz. Sleeps 4, a five-minute walk from the beach."
+intro = "Logoxo 1 is a loft: 49 m² of completely open space at street level, on the ground floor of a 1900 building in the old town of Zarautz. The sleeping area is part of the living room, with no door between them. The bathroom is separate."
+destacado_titulo = "Step-free access"
+destacado_texto = "It has its own door onto the pavement: you walk straight in at street level, with no lobby, no stairs and no lift. Doorway widths and the bathroom meet accessibility regulations, so you can move around the whole apartment in a wheelchair or with a walking frame."
+espacio = "A single open room with exposed concrete columns, sleeping up to four."
+
+[[apto]]
+clave = "logoxo2"
+slug = "logoxo-2-old-town-apartment-in-zarautz"
+corto = "Logoxo 2"
+lema = "Open-plan loft, old town"
+resumen = "47 m² with no partition walls or corridors, and its own door onto the street. Arrive, open it and you're home."
+titulo_seo = "Logoxo 2: Old Town Apartment in Zarautz"
+descripcion_seo = "A 47 m² ground-floor loft with its own street door in the old town of Zarautz. Sleeps 4, a five-minute walk from the beach."
+intro = "Logoxo 2 is a loft: 47 m² of completely open space at street level, on the ground floor of a 1900 building in the old town of Zarautz. The sleeping area is part of the living room, with no door between them. The bathroom is separate."
+destacado_titulo = "Your own door onto the street"
+destacado_texto = "You walk straight in from the pavement, with no lobby, no stairs and no lift. Arrive, open your own door and you're home."
+espacio = "A single open room, with no partition walls or corridors, sleeping up to four."
+
+[ficha]
+espacio = "The space"
+equipamiento = "Amenities"
+barrio = "The street and the neighbourhood"
+fotos = "See all {n} photos"
+foto = "Photo {n} of {total}"
+cerrar = "Close"
+anterior = "Previous"
+siguiente = "Next"
+otro = "The other apartment"
+m2 = "{n} m²"
+lista = [
+  "Double bed, 150 cm",
+  "Italian sofa bed, 140 cm",
+  "Bed linen and towels included",
+  "Fibre Wi-Fi, more than enough for remote work",
+  "Heating",
+  "Television",
+  "Kitchen with hob, fridge and microwave",
+  "Capsule coffee machine and toaster",
+  "Washing machine",
+  "Dining table",
+  "Bathroom with walk-in shower",
+  "Hair dryer",
+  "Keyless entry with a code",
+]
+
+[fotos]
+sofa = "sofa bed by the windows"
+general = "general view of the open-plan space"
+cama_ventanas = "double bed and sitting area"
+cama = "150 cm double bed"
+sofa_cama = "sofa bed opened out"
+vestidor = "clothes storage area"
+comedor = "kitchen and dining table"
+cocina = "equipped kitchen"
+bano = "bathroom with walk-in shower"
+bano_adaptado = "adapted bathroom"
+tele = "sitting area with television"
+fachada = "the two Logoxo doors on Herrikobarra street"
+
+[zarautz]
+etiqueta = "Zarautz"
+titulo = "The longest beach in Gipuzkoa, five minutes away"
+texto = "Two and a half kilometres of sand, waves to surf all year round, the seafront promenade for a stroll and an old town full of pintxo bars. All on foot from your door."
+creditos = "Photos of Zarautz"
+mapa_alt = "Map of Zarautz with Logoxo in the old town, a few streets from the beach"
+presentacion = "Logoxo"
+[zarautz.fotos]
+"mirador" = "Zarautz beach seen from the viewpoint, with Getaria in the background"
+"playa" = "The beach"
+"toldos" = "The striped beach tents"
+"surf" = "Surf at sunset"
+"musika-plaza" = "Musika plaza, in the old town"
+"atardecer" = "Sunset over the Mouse of Getaria"
+
+[ventajas]
+etiqueta = "Amenities"
+titulo = "Everything you need"
+texto = "Whether you are here to surf, to work remotely or to eat well, it is all ready for you."
+[[ventajas.item]]
+icono = "ola"
+titulo = "Five minutes from the beach"
+texto = "And from the pintxo bars, on foot from the door."
+[[ventajas.item]]
+icono = "acceso"
+titulo = "Step-free access"
+texto = "Logoxo 1 is entered at street level, with doorway clearances and a bathroom that meet accessibility regulations."
+[[ventajas.item]]
+icono = "wifi"
+titulo = "Fibre Wi-Fi"
+texto = "Fast enough to work remotely without thinking about it."
+[[ventajas.item]]
+icono = "cocina"
+titulo = "Fully equipped kitchen"
+texto = "For unhurried breakfasts and the odd dinner in."
+[[ventajas.item]]
+icono = "calor"
+titulo = "Heating"
+texto = "Strong, and ready for the Basque coast in winter."
+[[ventajas.item]]
+icono = "cama"
+titulo = "Welcome pack"
+texto = "Bed linen and towels included, ready when you arrive."
+
+[directo]
+etiqueta = "No middlemen"
+titulo = "Booking direct"
+texto = "The same as on the platforms, without what they cost."
+superhost_titulo = "Airbnb Superhost"
+superhost_texto = "We have kept five-star reviews since our first year: careful cleaning, quick replies and everything where it should be. Booking here gets you exactly the same, without the commission."
+[[directo.item]]
+titulo = "Best price"
+texto = "No platform commission. What you save stays in your pocket."
+[[directo.item]]
+titulo = "Direct contact"
+texto = "You write to us and we reply. No call centres, no lost forms."
+[[directo.item]]
+titulo = "Flexibility"
+texto = "Priority on check-in and check-out times, subject to availability."
+
+[zona]
+etiqueta = "Location"
+titulo = "The street and the neighbourhood"
+texto = "Herrikobarra is a quiet pedestrian street, right in the old town but away from the bustle of Kale Nagusia and Zigordia. The atmosphere is round the corner and the quiet is at home."
+mapa = "See on the map"
+[[zona.item]]
+termino = "Beach"
+texto = "five minutes on foot, and the pintxo bars too"
+[[zona.item]]
+termino = "Next door"
+texto = "the post office and an Eroski supermarket"
+[[zona.item]]
+termino = "A step away"
+texto = "the health centre, the town hall and the tourist office"
+[[zona.item]]
+termino = "All around"
+texto = "the old town bars, Plaza del Pilar and Plaza de la Música"
+
+[condiciones]
+etiqueta = "Terms"
+titulo = "Before you book"
+texto = "The same terms apply to both apartments."
+[[condiciones.item]]
+titulo = "Times"
+texto = "Check-in from {entrada} and check-out by {salida}. You let yourself in with a code you receive before you arrive."
+[[condiciones.item]]
+titulo = "Payment"
+texto = "50% when you book and the rest 14 days before arrival. No security deposit."
+[[condiciones.item]]
+titulo = "Cancellation"
+texto = "100% of what you have paid is refunded if you cancel up to 14 days before arrival, and 50% up to 7 days before. No refund after that."
+[[condiciones.item]]
+titulo = "House rules"
+texto = "Children welcome. No pets."
+
+[contacto]
+etiqueta = "Contact"
+titulo = "Shall we look at dates?"
+texto = "Check availability for both apartments and book with no commission. And if you have any questions, write to us: we answer ourselves."
+whatsapp = "WhatsApp"
+llamar = "Phone"
+correo = "Email"
+
+[pie]
+registro = "Basque Register of Tourism Companies and Activities"
+derechos = "All rights reserved"
+lema = "Holiday apartments in the old town of Zarautz."
+redireccion = "This page has moved."
+
+[[legal]]
+clave = "aviso"
+slug = "legal-notice"
+titulo = "Legal notice"
+[[legal]]
+clave = "privacidad"
+slug = "privacy-policy"
+titulo = "Privacy policy"
+[[legal]]
+clave = "cookies"
+slug = "cookie-policy"
+titulo = "Cookie policy"

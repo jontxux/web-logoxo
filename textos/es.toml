@@ -1,0 +1,258 @@
+[meta]
+etiqueta = "ES"
+nombre = "Español"
+locale = "es_ES"
+titulo = "Apartamentos en Zarautz a 5 min de la playa | Logoxo"
+descripcion = "Dos lofts de planta baja en el casco antiguo de Zarautz, con puerta propia a la calle y sin escalones. A cinco minutos andando de la playa. Reserva directa, sin comisiones."
+
+[nav]
+apartamentos = "Apartamentos"
+ubicacion = "Ubicación"
+condiciones = "Condiciones"
+contacto = "Contacto"
+reservar = "Reservar"
+menu = "Menú"
+saltar = "Saltar al contenido"
+idioma = "Idioma"
+inicio = "Inicio"
+
+[reserva]
+titulo = "Consulta tus fechas"
+llegada = "Llegada"
+salida = "Salida"
+huespedes = "Huéspedes"
+error = "La salida tiene que ser posterior a la llegada."
+boton = "Buscar"
+nota = "Te enseñamos qué apartamento está libre en esas fechas y cuánto cuesta. El pago es seguro, con tarjeta."
+buscando = "Consultando la disponibilidad…"
+libre = "Disponible"
+ocupado = "No disponible en esas fechas"
+noche = "1 noche"
+noches = "{n} noches"
+total = "{precio} en total"
+por_noche = "{precio} por noche"
+ninguno = "No queda ninguno libre en esas fechas. Prueba con otras o escríbenos y lo miramos."
+fallo = "Ahora mismo no podemos consultar la disponibilidad desde aquí. La verás, con el precio, en el siguiente paso."
+resultados = "Resultado de la búsqueda"
+elegir = "Reservar"
+ver_precio = "Ver precio"
+
+[portada]
+etiqueta = "Zarautz · Casco antiguo"
+titulo = "Espacios abiertos, sin habitaciones cerradas"
+subtitulo = "Planta baja, puerta propia a la calle, sin escaleras."
+texto = "Logoxo son dos apartamentos de planta baja en el casco antiguo de Zarautz. Cada uno tiene su puerta a la calle, sin portal y sin escalones. Por dentro son espacios abiertos: la zona de dormir forma parte del salón, y el baño es independiente. La playa está a cinco minutos andando."
+ver = "Ver los apartamentos"
+
+[[cifras]]
+valor = "2"
+texto = "apartamentos"
+[[cifras]]
+valor = "49 y 47 m²"
+texto = "cada uno"
+[[cifras]]
+valor = "4"
+texto = "huéspedes máximo"
+[[cifras]]
+valor = "5 min"
+texto = "andando a la playa"
+
+[aptos]
+etiqueta = "Los apartamentos"
+titulo = "Dos apartamentos, elige el tuyo"
+texto = "Son casi iguales. La diferencia está en la accesibilidad de Logoxo 1."
+ver = "Ver el apartamento"
+reservar = "Reservar"
+huespedes = "4 huéspedes"
+camas = "Cama doble y sofá cama"
+bano = "1 baño"
+planta = "Planta baja"
+
+[[apto]]
+clave = "logoxo1"
+slug = "logoxo-1-loft-accesible-en-el-casco-antiguo"
+corto = "Logoxo 1"
+lema = "Loft accesible en el casco antiguo"
+resumen = "49 m² a ras de calle, con anchos de paso y baño adaptados: se puede circular en silla de ruedas por todo el apartamento."
+titulo_seo = "Logoxo 1: loft accesible en el casco antiguo de Zarautz"
+descripcion_seo = "Loft de 49 m² en planta baja, accesible y sin escalones, en el casco antiguo de Zarautz. Para 4 personas, a cinco minutos andando de la playa."
+intro = "Logoxo 1 es un loft: 49 m² completamente abiertos a pie de calle, en los bajos de un edificio de 1900 del casco antiguo de Zarautz. La zona de dormir forma parte del salón, sin puerta que la separe. El baño es independiente."
+destacado_titulo = "Accesible sin escalones"
+destacado_texto = "Puerta propia a la acera: se entra a ras de calle, sin portal, sin escaleras y sin ascensor. Los anchos de paso y el baño cumplen la normativa de accesibilidad, de modo que se puede circular en silla de ruedas o con andador por todo el apartamento."
+espacio = "Un único ambiente con columnas de hormigón visto, para hasta cuatro personas."
+
+[[apto]]
+clave = "logoxo2"
+slug = "logoxo-2-loft-en-el-casco-antiguo"
+corto = "Logoxo 2"
+lema = "Loft en el casco antiguo"
+resumen = "47 m² sin tabiques ni pasillos, con su propia puerta a la calle. Llegas, abres y ya estás en casa."
+titulo_seo = "Logoxo 2: loft en el casco antiguo de Zarautz"
+descripcion_seo = "Loft de 47 m² en planta baja con puerta propia a la calle, en el casco antiguo de Zarautz. Para 4 personas, a cinco minutos andando de la playa."
+intro = "Logoxo 2 es un loft: 47 m² completamente abiertos a pie de calle, en los bajos de un edificio de 1900 del casco antiguo de Zarautz. La zona de dormir forma parte del salón, sin puerta que la separe. El baño es independiente."
+destacado_titulo = "Puerta propia a la calle"
+destacado_texto = "Se entra directamente desde la acera, sin portal, sin escaleras y sin ascensor. Llegas, abres tu puerta y ya estás en casa."
+espacio = "Un único ambiente, sin tabiques ni pasillos, para hasta cuatro personas."
+
+[ficha]
+espacio = "El espacio"
+equipamiento = "Equipamiento"
+barrio = "La calle y el barrio"
+fotos = "Ver las {n} fotos"
+foto = "Foto {n} de {total}"
+cerrar = "Cerrar"
+anterior = "Anterior"
+siguiente = "Siguiente"
+otro = "El otro apartamento"
+m2 = "{n} m²"
+lista = [
+  "Cama doble de 150 cm",
+  "Sofá cama italiano de 140 cm",
+  "Ropa de cama y toallas incluidas",
+  "Wi-Fi de fibra, de sobra para teletrabajar",
+  "Calefacción",
+  "Televisión",
+  "Cocina con placa, frigorífico y microondas",
+  "Cafetera de cápsulas y tostadora",
+  "Lavadora",
+  "Mesa de comedor",
+  "Baño con ducha a ras de suelo",
+  "Secador de pelo",
+  "Entrada con código, sin llaves",
+]
+
+[fotos]
+sofa = "sofá cama junto a los ventanales"
+general = "vista general del espacio abierto"
+cama_ventanas = "cama doble y zona de estar"
+cama = "cama doble de 150 cm"
+sofa_cama = "sofá cama abierto"
+vestidor = "zona de vestidor"
+comedor = "cocina y mesa de comedor"
+cocina = "cocina equipada"
+bano = "baño con ducha a ras de suelo"
+bano_adaptado = "baño adaptado"
+tele = "zona de estar con televisión"
+fachada = "las dos puertas de Logoxo en la calle Herrikobarra"
+
+[zarautz]
+etiqueta = "Zarautz"
+titulo = "La playa más larga de Gipuzkoa, a cinco minutos"
+texto = "Dos kilómetros y medio de arena, olas para surfear todo el año, el malecón para pasear y un casco viejo lleno de bares de pintxos. Todo se hace andando desde la puerta."
+creditos = "Fotos de Zarautz"
+mapa_alt = "Mapa de Zarautz con Logoxo en el casco antiguo, a pocas calles de la playa"
+presentacion = "Logoxo"
+[zarautz.fotos]
+"mirador" = "La playa de Zarautz vista desde el mirador, con Getaria al fondo"
+"playa" = "La playa"
+"toldos" = "Los toldos de rayas"
+"surf" = "Surf al atardecer"
+"musika-plaza" = "Musika plaza, en el casco viejo"
+"atardecer" = "Atardecer con el Ratón de Getaria"
+
+[ventajas]
+etiqueta = "Equipamiento"
+titulo = "Todo lo que necesitas"
+texto = "Ya vengas a surfear, a teletrabajar o a comer bien, lo tienes todo listo."
+[[ventajas.item]]
+icono = "ola"
+titulo = "A 5 minutos de la playa"
+texto = "Y de la zona de pintxos, andando desde la puerta."
+[[ventajas.item]]
+icono = "acceso"
+titulo = "Accesible sin escalones"
+texto = "Logoxo 1 se entra a ras de calle, con anchos de paso y baño conformes a la normativa de accesibilidad."
+[[ventajas.item]]
+icono = "wifi"
+titulo = "Wi-Fi de fibra"
+texto = "Alta velocidad, de sobra para teletrabajar."
+[[ventajas.item]]
+icono = "cocina"
+titulo = "Cocina completamente equipada"
+texto = "Para desayunar con calma y ahorrarte alguna cena fuera."
+[[ventajas.item]]
+icono = "calor"
+titulo = "Calefacción"
+texto = "Potente y lista para el invierno de la costa vasca."
+[[ventajas.item]]
+icono = "cama"
+titulo = "Pack de bienvenida"
+texto = "Ropa de cama y toallas incluidas, listas a tu llegada."
+
+[directo]
+etiqueta = "Sin intermediarios"
+titulo = "Reservar directamente"
+texto = "Lo mismo que encuentras en las plataformas, sin lo que cuestan."
+superhost_titulo = "Superhost en Airbnb"
+superhost_texto = "Mantenemos las valoraciones de cinco estrellas desde el primer año: limpieza cuidada, respuesta rápida y las cosas donde deben estar. Reservando aquí tienes exactamente lo mismo, sin la comisión."
+[[directo.item]]
+titulo = "Mejor precio"
+texto = "Sin la comisión de las plataformas. Lo que te ahorras se queda en tu bolsillo."
+[[directo.item]]
+titulo = "Trato directo"
+texto = "Nos escribes a nosotros y te contestamos nosotros. Sin centralitas ni formularios perdidos."
+[[directo.item]]
+titulo = "Flexibilidad"
+texto = "Prioridad en la hora de entrada y de salida, según disponibilidad."
+
+[zona]
+etiqueta = "Ubicación"
+titulo = "La calle y el barrio"
+texto = "Herrikobarra es una calle peatonal y tranquila, en pleno casco viejo pero apartada del trasiego de la calle Mayor y de Zigordia. Tienes el ambiente a la vuelta de la esquina y el silencio en casa."
+mapa = "Ver en el mapa"
+[[zona.item]]
+termino = "Playa"
+texto = "cinco minutos andando, y la zona de pintxos también"
+[[zona.item]]
+termino = "Al lado"
+texto = "Correos y Eroski"
+[[zona.item]]
+termino = "A un paso"
+texto = "ambulatorio, Ayuntamiento y oficina de turismo"
+[[zona.item]]
+termino = "Alrededor"
+texto = "los bares del casco viejo, la plaza del Pilar y la plaza de la Música"
+
+[condiciones]
+etiqueta = "Condiciones"
+titulo = "Antes de reservar"
+texto = "Las mismas condiciones para los dos apartamentos."
+[[condiciones.item]]
+titulo = "Horario"
+texto = "Llegada a partir de las {entrada} y salida hasta las {salida}. Entras por tu cuenta, con un código que recibes antes de llegar."
+[[condiciones.item]]
+titulo = "Pago"
+texto = "El 50 % al reservar y el resto 14 días antes de la llegada. Sin fianza."
+[[condiciones.item]]
+titulo = "Cancelación"
+texto = "Se devuelve el 100 % de lo pagado si cancelas hasta 14 días antes de la llegada y el 50 % hasta 7 días antes. Después no hay reembolso."
+[[condiciones.item]]
+titulo = "Normas de la casa"
+texto = "Niños bienvenidos. No se aceptan animales."
+
+[contacto]
+etiqueta = "Contacto"
+titulo = "¿Miramos fechas?"
+texto = "Consulta la disponibilidad de los dos apartamentos y reserva sin comisiones. Y si tienes alguna duda, escríbenos: contestamos nosotros."
+whatsapp = "WhatsApp"
+llamar = "Teléfono"
+correo = "Correo"
+
+[pie]
+registro = "Registro de Empresas y Actividades Turísticas de Euskadi"
+derechos = "Todos los derechos reservados"
+lema = "Apartamentos turísticos en el casco antiguo de Zarautz."
+redireccion = "Esta página ha cambiado de sitio."
+
+[[legal]]
+clave = "aviso"
+slug = "aviso-legal"
+titulo = "Aviso legal"
+[[legal]]
+clave = "privacidad"
+slug = "politica-de-privacidad"
+titulo = "Política de privacidad"
+[[legal]]
+clave = "cookies"
+slug = "politica-de-cookies"
+titulo = "Política de cookies"

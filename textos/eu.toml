@@ -1,0 +1,258 @@
+[meta]
+etiqueta = "EU"
+nombre = "Euskara"
+locale = "eu_ES"
+titulo = "Apartamentuak Zarautzen, hondartzatik 5 minutura | Logoxo"
+descripcion = "Beheko solairuko bi loft Zarauzko alde zaharrean, kalerako ate propioarekin eta eskailerarik gabe. Hondartzatik bost minutura oinez. Erreserba zuzena, komisiorik gabe."
+
+[nav]
+apartamentos = "Apartamentuak"
+ubicacion = "Kokapena"
+condiciones = "Baldintzak"
+contacto = "Kontaktua"
+reservar = "Erreserbatu"
+menu = "Menua"
+saltar = "Joan edukira"
+idioma = "Hizkuntza"
+inicio = "Hasiera"
+
+[reserva]
+titulo = "Begiratu zure datak"
+llegada = "Sarrera"
+salida = "Irteera"
+huespedes = "Gonbidatuak"
+error = "Irteerak sarrera baino geroagokoa izan behar du."
+boton = "Bilatu"
+nota = "Data horietan zein apartamentu dagoen libre eta zenbat balio duen erakutsiko dizugu. Ordainketa segurua, txartelarekin."
+buscando = "Erabilgarritasuna kontsultatzen…"
+libre = "Libre"
+ocupado = "Ez dago libre data horietan"
+noche = "gau 1"
+noches = "{n} gau"
+total = "{precio} guztira"
+por_noche = "{precio} gaueko"
+ninguno = "Ez da bat ere libre geratzen data horietan. Probatu beste batzuekin edo idatzi iezaguzu eta begiratuko dugu."
+fallo = "Une honetan ezin dugu erabilgarritasuna hemendik kontsultatu. Hurrengo urratsean ikusiko duzu, prezioarekin batera."
+resultados = "Bilaketaren emaitza"
+elegir = "Erreserbatu"
+ver_precio = "Ikusi prezioa"
+
+[portada]
+etiqueta = "Zarautz · Alde zaharra"
+titulo = "Espazio irekiak, logela itxirik gabe"
+subtitulo = "Beheko solairua, kalerako ate propioa, eskailerarik gabe."
+texto = "Logoxo Zarauzko alde zaharreko beheko solairuko bi apartamentu dira. Bakoitzak kalerako ate propioa du, atarik gabe eta eskailerarik gabe. Barrutik espazio irekiak dira: lo egiteko gunea egongelaren parte da, eta komuna independentea. Hondartza bost minutura dago oinez."
+ver = "Ikusi apartamentuak"
+
+[[cifras]]
+valor = "2"
+texto = "apartamentu"
+[[cifras]]
+valor = "49 eta 47 m²"
+texto = "bakoitza"
+[[cifras]]
+valor = "4"
+texto = "gonbidatu gehienez"
+[[cifras]]
+valor = "5 min"
+texto = "oinez hondartzara"
+
+[aptos]
+etiqueta = "Apartamentuak"
+titulo = "Bi apartamentu, aukeratu zurea"
+texto = "Ia berdinak dira. Aldea Logoxo 1en irisgarritasuna da."
+ver = "Ikusi apartamentua"
+reservar = "Erreserbatu"
+huespedes = "4 gonbidatu"
+camas = "Ohe bikoitza eta sofa-ohea"
+bano = "Komun 1"
+planta = "Beheko solairua"
+
+[[apto]]
+clave = "logoxo1"
+slug = "logoxo-1-loft-irisgarria-alde-zaharrean"
+corto = "Logoxo 1"
+lema = "Loft irisgarria alde zaharrean"
+resumen = "49 m² kale mailan, igarobide eta komun egokituekin: gurpil-aulkian mugi zaitezke apartamentu osoan."
+titulo_seo = "Logoxo 1: loft irisgarria Zarauzko alde zaharrean"
+descripcion_seo = "49 m²-ko lofta beheko solairuan, irisgarria eta eskailerarik gabea, Zarauzko alde zaharrean. 4 lagunentzat, hondartzatik bost minutura oinez."
+intro = "Logoxo 1 loft bat da: 49 m² erabat irekiak, kalearekin maila berean, Zarauzko alde zaharreko 1900eko eraikin baten beheko solairuan. Lo egiteko gunea egongelaren parte da, ate banatzailerik gabe. Komuna independentea da."
+destacado_titulo = "Irisgarria, eskailerarik gabe"
+destacado_texto = "Kalerako ate propioa du: espaloitik zuzenean sartzen da, atariarik, eskailerarik eta igogailurik gabe. Igarobideen zabalerak eta komunak irisgarritasun-araudia betetzen dute; beraz, gurpil-aulkian edo ibiltzeko laguntzarekin mugi zaitezke apartamentu osoan."
+espacio = "Gune bakarra, hormigoi biluziko zutabeekin, lau lagunentzat."
+
+[[apto]]
+clave = "logoxo2"
+slug = "logoxo-2-loft-a-alde-zaharrean"
+corto = "Logoxo 2"
+lema = "Lofta alde zaharrean"
+resumen = "47 m² hormarik eta korridorerik gabe, kalerako ate propioarekin. Iritsi, ireki eta etxean zaude."
+titulo_seo = "Logoxo 2: lofta Zarauzko alde zaharrean"
+descripcion_seo = "47 m²-ko lofta beheko solairuan, kalerako ate propioarekin, Zarauzko alde zaharrean. 4 lagunentzat, hondartzatik bost minutura oinez."
+intro = "Logoxo 2 loft bat da: 47 m² erabat irekiak, kalearekin maila berean, Zarauzko alde zaharreko 1900eko eraikin baten beheko solairuan. Lo egiteko gunea egongelaren parte da, ate banatzailerik gabe. Komuna independentea da."
+destacado_titulo = "Kalerako ate propioa"
+destacado_texto = "Espaloitik zuzenean sartzen da, atariarik, eskailerarik eta igogailurik gabe. Iritsi, zure atea ireki eta etxean zaude."
+espacio = "Gune bakarra, hormarik eta korridorerik gabe, lau lagunentzat."
+
+[ficha]
+espacio = "Espazioa"
+equipamiento = "Ekipamendua"
+barrio = "Kalea eta auzoa"
+fotos = "Ikusi {n} argazkiak"
+foto = "{n}. argazkia, {total}tik"
+cerrar = "Itxi"
+anterior = "Aurrekoa"
+siguiente = "Hurrengoa"
+otro = "Beste apartamentua"
+m2 = "{n} m²"
+lista = [
+  "Ohe bikoitza, 150 cm",
+  "Sofa-ohe italiarra, 140 cm",
+  "Ohe-arropa eta eskuoihalak barne",
+  "Zuntzezko Wi-Fia, telelanerako aski eta sobera",
+  "Berogailua",
+  "Telebista",
+  "Sukaldea: plaka, hozkailua eta mikrouhin-labea",
+  "Kapsula-kafetera eta txigorgailua",
+  "Garbigailua",
+  "Jateko mahaia",
+  "Komuna, lur-mailako dutxarekin",
+  "Ile-lehorgailua",
+  "Sarrera kodearekin, giltzarik gabe",
+]
+
+[fotos]
+sofa = "sofa-ohea leiho handien ondoan"
+general = "espazio irekiaren ikuspegi orokorra"
+cama_ventanas = "ohe bikoitza eta egongela"
+cama = "150 cm-ko ohe bikoitza"
+sofa_cama = "sofa-ohea irekita"
+vestidor = "arropa uzteko gunea"
+comedor = "sukaldea eta jateko mahaia"
+cocina = "sukalde hornitua"
+bano = "komuna, lur-mailako dutxarekin"
+bano_adaptado = "komun egokitua"
+tele = "egongela telebistarekin"
+fachada = "Logoxoren bi ateak Herrikobarra kalean"
+
+[zarautz]
+etiqueta = "Zarautz"
+titulo = "Gipuzkoako hondartzarik luzeena, bost minutura"
+texto = "Bi kilometro eta erdi hondar, urte osoan surf egiteko olatuak, paseatzeko malekoia eta pintxo-tabernaz betetako alde zaharra. Dena oinez, atetik bertatik."
+creditos = "Zarauzko argazkiak"
+mapa_alt = "Zarauzko mapa, Logoxo alde zaharrean, hondartzatik kale gutxira"
+presentacion = "Logoxo"
+[zarautz.fotos]
+"mirador" = "Zarauzko hondartza begiratokitik, Getaria atzean duela"
+"playa" = "Hondartza"
+"toldos" = "Marradun toldoak"
+"surf" = "Surfa ilunabarrean"
+"musika-plaza" = "Musika plaza, alde zaharrean"
+"atardecer" = "Ilunabarra Getariako Saguarekin"
+
+[ventajas]
+etiqueta = "Ekipamendua"
+titulo = "Behar duzun guztia"
+texto = "Surf egitera, telelanera edo ondo jatera etorrita ere, dena prest duzu."
+[[ventajas.item]]
+icono = "ola"
+titulo = "Hondartzatik bost minutura"
+texto = "Eta pintxo-gunetik, atetik bertatik oinez."
+[[ventajas.item]]
+icono = "acceso"
+titulo = "Irisgarria, eskailerarik gabe"
+texto = "Logoxo 1 kale mailan sartzen da, ate-zabalerak eta komuna irisgarritasun-araudiaren araberakoak dituela."
+[[ventajas.item]]
+icono = "wifi"
+titulo = "Zuntzezko wifia"
+texto = "Abiadura handikoa, telelanerako soberan."
+[[ventajas.item]]
+icono = "cocina"
+titulo = "Sukalde guztiz hornitua"
+texto = "Lasai gosaltzeko eta afariren bat aurrezteko."
+[[ventajas.item]]
+icono = "calor"
+titulo = "Berogailua"
+texto = "Indartsua, kostaldeko negurako prest."
+[[ventajas.item]]
+icono = "cama"
+titulo = "Ongietorri-paketea"
+texto = "Ohe-arropa eta eskuoihalak barne, iristean prest."
+
+[directo]
+etiqueta = "Bitartekaririk gabe"
+titulo = "Erreserba zuzena"
+texto = "Plataformetan aurkitzen duzun bera, kostatzen dutena gabe."
+superhost_titulo = "Airbnb-ko Superhost"
+superhost_texto = "Lehen urtetik bost izarreko balorazioak mantentzen ditugu: garbiketa zaindua, erantzun azkarra eta gauzak egon behar duten lekuan. Hemen erreserbatuta gauza bera duzu, komisiorik gabe."
+[[directo.item]]
+titulo = "Prezio hoberena"
+texto = "Plataformen komisiorik gabe. Aurrezten duzuna zure poltsikoan geratzen da."
+[[directo.item]]
+titulo = "Harreman zuzena"
+texto = "Guri idazten diguzu eta guk erantzuten dizugu. Zentralitarik eta galdutako formulariorik gabe."
+[[directo.item]]
+titulo = "Malgutasuna"
+texto = "Lehentasuna sartzeko eta irteteko orduetan, erabilgarritasunaren arabera."
+
+[zona]
+etiqueta = "Kokapena"
+titulo = "Kalea eta auzoa"
+texto = "Herrikobarra oinezkoen kale lasaia da, alde zaharraren erdian baina Kale Nagusiko eta Zigordiako joan-etorritik aparte. Giroa kantoia buelta batera duzu, eta isiltasuna etxean."
+mapa = "Ikusi mapan"
+[[zona.item]]
+termino = "Hondartza"
+texto = "bost minutu oinez, eta pintxo-gunea ere bai"
+[[zona.item]]
+termino = "Ondoan"
+texto = "Correos eta Eroski"
+[[zona.item]]
+termino = "Pauso batera"
+texto = "anbulatorioa, Udaletxea eta turismo bulegoa"
+[[zona.item]]
+termino = "Inguruan"
+texto = "alde zaharreko tabernak, Pilar plaza eta Musika plaza"
+
+[condiciones]
+etiqueta = "Baldintzak"
+titulo = "Erreserbatu aurretik"
+texto = "Baldintza berak bi apartamentuetarako."
+[[condiciones.item]]
+titulo = "Ordutegia"
+texto = "Sarrera {entrada}etatik aurrera eta irteera {salida}ak arte. Zure kabuz sartzen zara, iritsi aurretik jasotzen duzun kode batekin."
+[[condiciones.item]]
+titulo = "Ordainketa"
+texto = "% 50 erreserba egitean eta gainerakoa iritsi baino 14 egun lehenago. Fidantzarik gabe."
+[[condiciones.item]]
+titulo = "Ezeztapena"
+texto = "Ordaindutakoaren % 100 itzultzen da iritsi baino 14 egun lehenago arte ezeztatuz gero, eta % 50 iritsi baino 7 egun lehenago arte. Hortik aurrera ez da dirurik itzultzen."
+[[condiciones.item]]
+titulo = "Etxeko arauak"
+texto = "Haurrak ongi etorriak dira. Ez da animaliarik onartzen."
+
+[contacto]
+etiqueta = "Kontaktua"
+titulo = "Datak begiratuko ditugu?"
+texto = "Ikusi bi apartamentuen erabilgarritasuna eta erreserbatu komisiorik gabe. Eta zalantzarik baduzu, idatzi iezaguzu: guk erantzungo dizugu."
+whatsapp = "WhatsApp"
+llamar = "Telefonoa"
+correo = "Posta elektronikoa"
+
+[pie]
+registro = "Euskadiko Turismo Enpresen eta Jardueren Erregistroa"
+derechos = "Eskubide guztiak erreserbatuak"
+lema = "Apartamentu turistikoak Zarauzko alde zaharrean."
+redireccion = "Orri hau lekuz aldatu da."
+
+[[legal]]
+clave = "aviso"
+slug = "lege-oharra"
+titulo = "Lege oharra"
+[[legal]]
+clave = "privacidad"
+slug = "pribatutasun-politika"
+titulo = "Pribatutasun-politika"
+[[legal]]
+clave = "cookies"
+slug = "cookien-politika"
+titulo = "Cookie-politika"
