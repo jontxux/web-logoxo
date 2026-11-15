@@ -229,7 +229,7 @@ titulo = "Times"
 texto = "Check-in from {entrada} and check-out by {salida}. You let yourself in with a code you receive before you arrive."
 [[condiciones.item]]
 titulo = "Payment"
-texto = "50% when you book and the rest 14 days before arrival. No security deposit."
+texto = "50% when you book and the rest 14 days before arrival."
 [[condiciones.item]]
 titulo = "Cancellation"
 texto = "100% of what you have paid is refunded if you cancel up to 14 days before arrival, and 50% up to 7 days before. No refund after that."

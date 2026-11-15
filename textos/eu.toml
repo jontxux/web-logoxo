@@ -229,7 +229,7 @@ titulo = "Ordutegia"
 texto = "Sarrera {entrada}etatik aurrera eta irteera {salida}ak arte. Zure kabuz sartzen zara, iritsi aurretik jasotzen duzun kode batekin."
 [[condiciones.item]]
 titulo = "Ordainketa"
-texto = "% 50 erreserba egitean eta gainerakoa iritsi baino 14 egun lehenago. Fidantzarik gabe."
+texto = "% 50 erreserba egitean eta gainerakoa iritsi baino 14 egun lehenago."
 [[condiciones.item]]
 titulo = "Ezeztapena"
 texto = "Ordaindutakoaren % 100 itzultzen da iritsi baino 14 egun lehenago arte ezeztatuz gero, eta % 50 iritsi baino 7 egun lehenago arte. Hortik aurrera ez da dirurik itzultzen."

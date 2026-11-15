@@ -229,7 +229,7 @@ titulo = "Horario"
 texto = "Llegada a partir de las {entrada} y salida hasta las {salida}. Entras por tu cuenta, con un código que recibes antes de llegar."
 [[condiciones.item]]
 titulo = "Pago"
-texto = "El 50 % al reservar y el resto 14 días antes de la llegada. Sin fianza."
+texto = "El 50 % al reservar y el resto 14 días antes de la llegada."
 [[condiciones.item]]
 titulo = "Cancelación"
 texto = "Se devuelve el 100 % de lo pagado si cancelas hasta 14 días antes de la llegada y el 50 % hasta 7 días antes. Después no hay reembolso."
