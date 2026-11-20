@@ -7,8 +7,9 @@ idiomas = ["es", "eu", "en"]          # el primero es el de la portada raíz
 fotos = "~/Imágenes/logoxo_argazkiak" # originales; el generador las reduce
 anchos = [640, 1280, 1920]
 # false mientras esté en una dirección de prueba: pide a los buscadores que no
-# la indexen. Poner true el día que logoxoat.com apunte aquí.
-indexar = false            # tamaños que se generan de cada foto
+# la indexen. true desde el 20/11/2026, al pedir a Lodgify que logoxoat.com
+# apunte aquí.
+indexar = true
 
 [contacto]
 titular = "Jon Bergerandi"

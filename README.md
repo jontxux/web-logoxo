@@ -55,12 +55,15 @@ motor.
 ## Antes de publicarla
 
 - La pasarela de Lodgify ya va en verde (colores del tema publicados el
-  15/11/2026). El día del cambio: `indexar = true` y un fichero `CNAME` con el
-  dominio en la rama `gh-pages` (o el dominio propio en los ajustes de Pages).
+  15/11/2026).
+- Desde el 20/11/2026: `indexar = true` y `publicar.sh` deja en `gh-pages` un
+  `CNAME` con el dominio de `config.toml`, así que jontxux.github.io/web-logoxo
+  redirige a logoxoat.com.
 - El DNS de logoxoat.com lo lleva Lodgify (los registros los añaden ellos a
-  mano): para apuntar el dominio aquí hay que pedírselo a su soporte.
-
-- Repasar la política de privacidad: habla del formulario de contacto, de
-  reCAPTCHA y de Chekin, que aquí no existen.
+  mano): el 20/11/2026 se les pidió apuntar logoxoat.com (A de GitHub Pages)
+  y www (CNAME a jontxux.github.io). Cuando resuelva, activar «Enforce HTTPS»
+  en los ajustes de Pages.
+- Política de privacidad repasada el 20/11/2026: sin formulario, reCAPTCHA ni
+  Chekin; GitHub como alojamiento.
 - El aviso de la tasa turística, cuando la ordenanza sea definitiva.
 - Decidir dónde se aloja y probarla antes en un subdominio.

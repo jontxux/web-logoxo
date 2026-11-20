@@ -8,6 +8,8 @@ remoto=$(git remote get-url origin)
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 cp -r publico/. "$tmp/"
+# Dominio propio de GitHub Pages: sale del dominio de config.toml.
+python3 -c 'import tomllib;print(tomllib.load(open("config.toml","rb"))["sitio"]["dominio"].split("//")[1])' > "$tmp/CNAME"
 cd "$tmp"
 git init -q -b gh-pages
 git add -A
